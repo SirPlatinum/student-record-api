@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import studentRoutes from "./routes/studentRoutes.js"; // ✅ make sure this path exists
+import studentRoutes from "./routes/studentRoutes.js"; 
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Use routes
-app.use("/api/students", studentRoutes); // ✅ important line
+app.use("/api/students", studentRoutes); 
 
 // Default route
 app.get("/", (req, res) => {
